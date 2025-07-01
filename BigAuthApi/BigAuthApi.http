@@ -1,0 +1,6 @@
+@BigAuthApi_HostAddress = http://localhost:5110
+
+GET {{BigAuthApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
