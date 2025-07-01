@@ -2,7 +2,6 @@
 using BigAuthApi.Model.Response;
 using BigAuthApi.Service.Interfaces;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BigAuthApi.Controllers
@@ -35,12 +34,33 @@ namespace BigAuthApi.Controllers
 
             if (result > 0)
             {
-                return Ok(result);
+                return NoContent();
             }
             else
             {
                 return StatusCode(StatusCodes.Status500InternalServerError, "Error adding product.");
             }
+        }
+
+        [HttpGet("get-product-by-id/{id}")]
+        public async Task<ActionResult<ProductResponse>> GetProductByIdAsync(int id)
+        {
+            var result = await _productService.GetProductByIdAsync(id);
+            return Ok(result);
+        }
+
+        [HttpPost("update-product")]
+        public async Task<ActionResult<ProductResponse>> UpdateProductAsync([FromBody] ProductRequest req)
+        {
+            var result = await _productService.UpdateProductAsync(req);
+            return Ok(result);
+        }
+
+        [HttpPost("delete-product-by-id/{id}")]
+        public async Task<ActionResult<ProductResponse>> DeleteProductById(int id)
+        {
+            var result = await _productService.DeleteProductAsync(id);
+            return Ok(result);
         }
     }
 }

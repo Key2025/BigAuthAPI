@@ -4,7 +4,6 @@ using BigAuthApi.Models.Request;
 using BigAuthApi.Models.Response;
 using BigAuthApi.Service.Interfaces;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BigAuthApi.Controllers

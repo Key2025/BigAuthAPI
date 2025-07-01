@@ -1,8 +1,6 @@
 ﻿using BigAuthApi.Model;
 using BigAuthApi.Repository.Base;
 using BigAuthApi.Repository.Interfaces;
-using Microsoft.AspNetCore.Identity;
-using System.Data;
 
 namespace BigAuthApi.Repository.Main
 {

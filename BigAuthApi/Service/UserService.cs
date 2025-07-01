@@ -6,7 +6,6 @@ using BigAuthApi.Models.Response;
 using BigAuthApi.Repository.Interfaces;
 using BigAuthApi.Service.Interfaces;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
 
 namespace BigAuthApi.Service

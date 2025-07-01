@@ -8,5 +8,11 @@ namespace BigAuthApi.Service.Interfaces
         Task<List<ProductResponse>> GetAllProductsAsync();
 
         Task<int> AddProductAsync(ProductRequest req);
+
+        Task<ProductResponse?> GetProductByIdAsync(int id);
+
+        Task<int> UpdateProductAsync(ProductRequest req);
+
+        Task<int> DeleteProductAsync(int id);
     }
 }

@@ -4,6 +4,8 @@ namespace BigAuthApi.Model.Request
 {
     public class ProductRequest
     {
+        public int Id { get; set; }
+
         [Required]
         [StringLength(100)]
         public string ProductName { get; set; } = string.Empty;
